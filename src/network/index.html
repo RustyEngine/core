@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var uri = 'ws://' + location.host + '/rews';
+            var ws = new WebSocket(uri);
+            ws.onopen = function() {
+                console.log("Connected.");
+            }
+            ws.onmessage = function(msg) {
+                console(msg);
+            };
+        </script>
+    </body>
+</html>
